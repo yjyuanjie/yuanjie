@@ -1,0 +1,47 @@
+1.string.number.boolean.null.undefined
+2.内联脚本：<script>
+  console.log("Hello, World!");
+</script>
+外部脚本：<script src="script.js"></script>
+事故处理器：<button onclick="alert('Button clicked!')">Click me</button>
+3.变量名必须以字母、美元符号 ( $ ) 或下划线 ( _ ) 开头。
+ 
+变量名可以包含字母、数字、美元符号 ( $ ) 和下划线 ( _ )。
+ 
+变量名是区分大小写的。
+ 
+变量名不能是JavaScript的保留字或关键字。
+ 
+变量名应具有描述性，便于理解其用途。
+4.
+分支结构类型：
+ if  语句：用于单个条件判断。
+ 
+ if...else  语句：用于两个互斥条件的判断。
+ 
+ if...else if...else  语句：用于多个条件的判断。
+ 
+ switch  语句：用于多个条件的判断，适用于值较多且条件较为复杂的情况。
+多重if分支结构的语法：
+if (condition1) {
+  // 代码块1
+} else if (condition2) {
+  // 代码块2
+} else if (condition3) {
+  // 代码块3
+} else {
+  // 代码块4（所有条件都不满足时执行）
+}
+5.
+局部变量：在函数内部声明的变量，其作用域仅限于该函数内部。函数外部无法访问局部变量。
+var globalVar = "I am a global variable";
+function example() {
+  console.log(globalVar); // 输出 "I am a global variable"
+}
+console.log(globalVar); // 输出 "I am a global variable"
+全局变量：在函数外部声明的变量，其作用域是整个脚本或文件。任何函数内部都可以访问全局变量。
+var globalVar = "I am a global variable";
+function example() {
+  console.log(globalVar); // 输出 "I am a global variable"
+}
+console.log(globalVar); // 输出 "I am a global variable"

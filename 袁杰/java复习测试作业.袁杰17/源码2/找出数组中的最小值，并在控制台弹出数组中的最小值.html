@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业四</title>
+</head>
+<body>
+    <script>
+        function sumMin(arr) {
+        var min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+        }
+        console.log(` ${min}`);
+        }
+
+        var arr = [78, 91, 66, 95, 48, 83, 87];
+        sumMin(arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+</head>
+<body>
+    <!-- 用css对表格进行美化 -->
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .calculator input,
+        .calculator select,
+        .calculator button {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .calculator button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .calculator button:hover {
+            background-color: #0056b3;
+        }
+
+        .calculator #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <!-- 做个盒子 -->
+    <div class="calculator">
+        <!-- 定义标题 -->
+        <h1>简单计算器</h1>
+        <!-- 链接 -->
+        <input type="number" id="num1">、
+        <!-- 单独进行定义 -->
+        <select id="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        <!-- 单独进行定义 -->
+        <input type="number" id="num2">
+        <button onclick="calculate()">计算</button>
+    </div>
+
+</body>
+<script>
+// 定义一个函数来计算结果
+function calculate() {
+    // 获取用户输入的数字和选择的运算
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let operation = document.getElementById('operation').value;
+
+    // 检查输入是否为有效数字
+    if (isNaN(num1) || isNaN(num2)) {
+        // 如果无效，则显示错误消息
+        alert('请输入有效的数字！');
+        return;
+    }
+
+    // 根据选择的运算执行计算
+    let result;
+    switch (operation) {
+        case 'add':
+            result = num1 + num2;
+            break;
+        case 'subtract':
+            result = num1 - num2;
+            break;
+        case 'multiply':
+            result = num1 * num2;
+            break;
+        case 'divide':
+            // 检查除数是否为零
+            if (num2 === 0) {
+                result = '除数不能为零！';
+            } else {
+                result = num1 / num2;
+            }
+            break;
+        default:
+            result = '无效的运算！';
+    }
+
+    // 显示结果
+    alert('计算结果为' + result);
+}
+</script>
+
+</html>

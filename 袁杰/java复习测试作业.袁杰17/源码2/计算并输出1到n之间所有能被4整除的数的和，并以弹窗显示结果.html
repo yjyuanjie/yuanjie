@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业5</title>
+</head>
+<body>
+    <script>
+      // 获取用户输入的n值
+      var n = parseInt(prompt("请输入一个正整数n:"));
+
+      // 初始化sum变量用于存储和
+      var sum = 0;
+
+       // 使用for循环计算1到n之间所有能被4整除的数的和
+       for (var i = 1; i <= n; i++) {
+       if (i % 4 === 0) {
+        sum += i;
+       }
+       }
+
+    // 使用alert弹窗显示结果
+       alert(`1到${n}之间所有能被4整除的数的和是: ${sum}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业2</title>
+    <style>
+        .YJ{
+            text-align: center;
+        }
+        .wd{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class=".wd">
+    <label for="username">用户名：</label>
+    <input type="text" id="username" name="username" required><br><br>
+    
+    <label for="nickname">昵称：</label>
+    <input type="text" id="nickname" name="nickname" required><br><br>
+    
+    <label>性别：</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">男</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">女</label><br><br>
+    
+    <label for="education">教育程度：</label>
+    <select id="education" name="education">
+        <option value="primary">小学</option>
+        <option value="primary">初中</option>
+        <option value="primary">中职</option>
+        <option value="primary">大专</option>
+        <option value="primary">本科</option>
+        <option value="primary">硕士</option>
+        <option value="primary">博士</option>
+        
+    </select><br><br>
+    
+    <label>兴趣爱好：</label>
+    <input type="checkbox" id="soccer" name="hobby" value="soccer">
+    <label for="soccer">踢足球</label>
+    <input type="checkbox" id="basketball" name="hobby" value="basketball">
+    <label for="basketball">打篮球</label>
+    <input type="checkbox" id="movies" name="hobby" value="movies" checked>
+    <label for="movies" >看电影</label><br><br>
+    
+    <label for="description">描述自己的特点：</label>
+    <textarea id="description" name="description" rows="20" cols="50"></textarea><br><br>
+    
+    <div class="YJ"><input type="submit" value="提交"></div>
+    </div>
+
+
+</body>
+</html>
